@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio website complete</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Eshwari</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="./projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="./usertable.html" class="nav__link">User Data</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!-- User Data Table -->
+        <section class="user-data section" id="user-data">
+            <h2 class="section-title">User Data</h2>
+
+            <div class="user-data__container bd-grid">
+                <table id="user-table" class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date</th>
+                            <th>Phone</th>
+                            <th>Age</th>
+                            <th>Website</th>
+                            <th>Country</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <!-- User data rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Eshwari</p>
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">&#169; All rights reserved</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Function to retrieve user data from local storage
+        function getUserData() {
+            // Retrieve data from local storage
+            let userData = localStorage.getItem('formData');
+
+            // Check if data exists in local storage
+            if (userData) {
+                try {
+                    // Parse the JSON string into an object
+                    userData = JSON.parse(userData);
+
+                    // Access table body element
+                    let tableBody = document.getElementById('user-table-body');
+
+                    // Create a new table row
+                    let newRow = document.createElement('tr');
+
+                    // Populate the row with user data
+                    newRow.innerHTML = `
+                        <td>${userData.name}</td>
+                        <td>${userData.email}</td>
+                        <td>${userData.date}</td>
+                        <td>${userData.phone}</td>
+                        <td>${userData.age}</td>
+                        <td>${userData.url}</td>
+                        <td>${userData.country}</td>
+                        <td>${userData.message}</td>
+                    `;
+
+                    // Append the new row to the table body
+                    tableBody.appendChild(newRow);
+
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                }
+            } else {
+                console.log('No user data found in local storage.');
+            }
+        }
+
+        // Call the function to load user data into the table
+        getUserData();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- ===== AOS LIBRARY ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        /* General styles can be placed in your styles.css file */
+        .process__container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Adjust as needed */
+        }
+
+        .process__step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Adjust as needed */
+        }
+
+        .process__step-content {
+            flex: 1;
+            /* Take remaining space */
+        }
+
+        .process__step-img {
+            flex-shrink: 0;
+            width: 300px;
+            height: 300px;
+            /* Adjust width and height as needed */
+        }
+
+        .process__img {
+            max-width: 100%;
+            /* Ensure image does not exceed container width */
+        }
+    </style>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Eshwari</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="./index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="./index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="./index.html#work" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="./index.html#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="./usertable.html" class="nav__link">User Data</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+
+        <!--===== PROCESS SECTION =====-->
+        <section class="process section" id="process">
+            <h2 class="section-title" data-aos="fade-up">Our Process</h2>
+            <div class="process__container bd-grid">
+                <div class="process__step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process__step-content">
+                        <h3 class="process__subtitle">Requirement Elicitation</h3>
+                        <p class="process__text">We begin by gathering comprehensive details about your project
+                            requirements. Through detailed discussions and analysis, we ensure a thorough understanding
+                            of your goals and needs.
+                            .</p>
+                    </div>
+                    <div class="process__step-img">
+                        <iframe src="https://lottie.host/embed/1ea202df-82a8-470c-982b-b92a2ddc9dd9/TjuA8fC9q0.json"
+                            style="border: none;height: 500px; width: auto;"></iframe>
+                    </div>
+                </div>
+
+                <div class="process__step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process__step-content">
+                        <h3 class="process__subtitle">Analysis and Design</h3>
+                        <p class="process__text">Our team dives deep into the gathered requirements, conducting a
+                            thorough analysis. We then craft a tailored design solution that aligns perfectly with your
+                            project objectives and specifications.</p>
+                    </div>
+                    <div class="process__step-img">
+                        <iframe src="https://lottie.host/embed/f64c3038-89fb-473f-a4bd-3baa41a10f03/di8ZW89eDO.json"
+                            style="border: none;height: 500px; width: auto;"></iframe>
+                    </div>
+                </div>
+
+                <div class="process__step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process__step-content">
+                        <h3 class="process__subtitle">Development</h3>
+                        <p class="process__text">Using cutting-edge technologies and industry best practices, we embark
+                            on the development phase. Our skilled developers bring your project to life, ensuring robust
+                            functionality and seamless user experience.</p>
+                    </div>
+                    <div class="process__step-img">
+                        <iframe src="https://lottie.host/embed/5b1ec904-1099-4be6-8b82-d1ca32790ec3/YOFC8WZD6y.json"
+                            style="border: none;height: 500px; width: auto;"></iframe>
+                    </div>
+                </div>
+
+                <div class="process__step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process__step-content">
+                        <h3 class="process__subtitle">Maintenance</h3>
+                        <p class="process__text">Beyond project completion, we provide ongoing support and maintenance
+                            services. Our commitment ensures your application operates smoothly, adapts to evolving
+                            needs, and remains up-to-date with technological advancements..</p>
+                    </div>
+                    <div class="process__step-img">
+                        <iframe src="https://lottie.host/embed/52a32c21-4bf9-4abc-8a6c-6e09546e0ea0/PREjlRUuM8.json"
+                            style="border: none;height: 500px; width: auto;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Eshwari</p>
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">&#169; All rights reserved</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== AOS LIBRARY =====-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // duration of the animation
+            once: true // only once animation when scrolling down
+        });
+    </script>
+
+</body>
+
+</html>
